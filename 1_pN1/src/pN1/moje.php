@@ -13,85 +13,36 @@ background-color:#999999;
 <body>
 <p> Hello from HTML </p>
 
-<!-- comment -->
-<!-- <img src ="wsb.png" alt ="cos tam"/> -->
-
 <?php
 
-// comment [one line]
-/* commented a little bit more */
-
-// echo "Hello from PHP";
-
 echo "<p>Hello from <b>HTML from PHP from HTML :></b><p/>";
-// echo "<img src=\"wsb.png\" alt =\"cos tam\"/>";
 
 echo '<img src="wsb.png" alt ="cos tam"/><br/>';
 
-/*$zmienna = 13;
-echo "$zmienna";
-echo "<p>Wartość zmiennej wynosi: $zmienna</p>";
-echo '<p>Nazwa zmiennej to: $zmienna</p>';
-var_dump($zmienna);
-
-echo '<br/><br/>';
-
-$zmienna = 13.4;
-echo "$zmienna";
-echo "<p>Wartość zmiennej wynosi: $zmienna</p>";
-echo '<p>Nazwa zmiennej to: $zmienna</p>';
-var_dump($zmienna);
-
-echo '<br/><br/>';
-
-$zmienna = "Ala ma kota";
-echo "$zmienna";
-echo "<p>Wartość zmiennej wynosi: $zmienna</p>";
-echo '<p>Nazwa zmiennej to: $zmienna</p>';
-var_dump($zmienna);*/
-
-// zmienna tablicowa [dozwolona jest tablica dziurawa,
-// gdzie brakuje, przykładowo wartość pomiędzy 0, a 2]
-/*$tab[0] = 1;
-// $tab[1] = 33;
-$tab[2] = 1333;
-$tab[3] = 12;
-
-var_dump($tab);
-echo '<br/><br/>';*/
-
-// tablica asocjacyjna,
-/*$tab["kasia"] = 1.13;
-$tab[2] = 133;
-$tab[3] = "Asia";
-
-var_dump($tab);
-echo '<br/><br/>'*/
-
-// nasza tablica z zastosowanie pętli for
-/*for ($i=0; $i<10; $i++) $tab[$i] = rand(1,10);
-
-echo "<table style<tr>";
-for ($i=0; $i<10; $i++) {
-echo "<td>$tab[$i]</td>";
-}
-echo "</table></tr>";*/
-
 // sortowanie bąbelkowe
-$tab[array]=5793216548;
+$tab[0]=8;
+$tab[1]=9;
+$tab[2]=7;
+$tab[3]=2;
+$tab[4]=3;
+$tab[5]=1;
+$tab[6]=4;
+$tab[7]=6;
+$tab[8]=5;
+$tab[9]=10;
 
 $temp;
 for ($j=0; $j<10-2; $j++)
 {
 for ($i=0; $i<10-2; $i++)
 {
-if(array[$i] = array[$i+1]);
-array[$i+1] = array[$i];
-array[$i] = temp;
+if(tab[$i] = tab[$i+1]);
+tab[$i+1] = tab[$i];
+tab[$i] = temp;
 }
 }
 echo "Tablica po sortowaniu bąbelkowym";
-foreach ($position in array)
+foreach ($position in tab)
 echo($position + " ");
 
 echo "<table style<tr>";
