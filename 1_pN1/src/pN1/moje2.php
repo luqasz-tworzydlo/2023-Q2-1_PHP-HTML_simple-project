@@ -9,7 +9,7 @@ table {border:1px solid black; background-color:blue;}
 td { border:2px solid gold;
 padding:1px; width:40px; text-align:center;
 background-color:#999999;
-font-size:36px;
+font-width:10px;
 }
 </style>
 
@@ -69,9 +69,37 @@ echo "</tr>";
 }
 echo "</table>";
 
-echo "<br/>*/
+echo "<br/>"*/
 
 // tablica 10x10 z wartościami losowymi [próba nr 2]
+            $wartosc_min = -25; $wartosc_max = 25;
+            for ($i=0; $i<10; $i++){
+                for($j=0; $j<10; $j++){
+                    $array_tablica[$i][$j] = rand(-25,25);
+                    if ($wartosc_min>$array_tablica[$i][$j]) $wartosc_min = $array_tablica[$i][$j];
+                    if ($wartosc_max<$array_tablica[$i][$j]) $wartosc_max = $array_tablica[$i][$j];
+                }
+            }
+
+            echo "<table>";
+            foreach($array_tablica as $wiersz){
+                echo "<tr>";
+                foreach($wiersz as $komorka){
+                    if($wartosc_min == $komorka){
+                        echo "<td style='background-color: red;'>$komorka</td>";
+                    } else if($wartosc_max == $komorka) {
+                        echo "<td style='background-color: green;'>$komorka</td>";
+                    } else {
+                        echo "<td>$komorka</td>";
+                    }
+                }
+                echo "</tr>";
+            }
+            echo "</table>";
+
+echo "<br/>";
+
+// tablica 10x10 z wartościami losowymi [próba 3]
             $wartosc_min = -25; $wartosc_max = 25;
             for ($i=0; $i<10; $i++){
                 for($j=0; $j<10; $j++){
