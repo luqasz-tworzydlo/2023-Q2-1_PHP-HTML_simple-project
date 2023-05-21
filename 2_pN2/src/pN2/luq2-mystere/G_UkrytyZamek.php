@@ -1,4 +1,4 @@
-<!DOKTYPE HTML>
+<!DOCTYPE HTML>
 
 <html>
 
@@ -9,10 +9,13 @@
 <body>
 	<div id="main">
 	<p>Znalazłeś w ścianie ukryty zamek do klucza!</br>
-	You found a hidden keyhole in the wall!</p>
-	<img src="IMG/ukrytyzamek_luq2-mystere.jpg" alt="ukrytyzamek_luq2-mystere" /></br>
-	<a href="A_RozpocznijGre.php">[POWTÓRZ / RESTART]</br> Rozpocznij grę od nowa...</br>
-	Restart the game...</a>
+		You found a hidden keyhole in the wall!</p>
+	<img src="IMG/ukrytyzamek_luq2-mystere.jpg" alt="ukrytyzamek_luq2-mystere" usemap='#first_key'/></br>
+
+	<map name="first_key">
+		<area shape="rect" coords="225,360,337,554" href="H_ZamknietePudelko.php" />
+	</map>
+
 	</div>
 </body>
 
