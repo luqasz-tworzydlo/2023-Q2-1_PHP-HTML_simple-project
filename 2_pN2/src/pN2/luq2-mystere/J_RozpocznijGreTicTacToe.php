@@ -143,11 +143,11 @@ td {
 	    }
 
 	    if (in_array('---', $plansza) === true && $gracz == 'X') {
-	        $emptyCells = array_keys($plansza, '---');
-	        if (count($emptyCells) > 0) {
-	            $randomCellIndex = array_rand($emptyCells);
-	            $randomCell = $emptyCells[$randomCellIndex];
-	            $plansza = wykonaj_ruch($plansza, $gracz, $randomCell);
+	        $pustaKomorka = array_keys($plansza, '---');
+	        if (count($pustaKomorka) > 0) {
+	            $losowyIndeksKomorki = array_rand($pustaKomorka);
+	            $losowaKomorka = $pustaKomorka[$losowyIndeksKomorki];
+	            $plansza = wykonaj_ruch($plansza, $gracz, $losowaKomorka);
 	            $_SESSION['plansza'] = $plansza;
 
 	            if (sprawdz_wygrana($plansza, $gracz))
