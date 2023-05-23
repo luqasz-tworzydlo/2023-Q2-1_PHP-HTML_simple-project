@@ -5,7 +5,7 @@
 </head>
 
 <style>
-table {border:0px solid black; background-color:blue;}
+table {border:0px solid black; background-color:rgb(0,255,0);}
 td { border:0px solid gold;
 padding:0px;  text-align:center;
 background-color:#999999;
