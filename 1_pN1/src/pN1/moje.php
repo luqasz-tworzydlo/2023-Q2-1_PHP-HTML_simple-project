@@ -31,7 +31,7 @@ $tab[7]=6;
 $tab[8]=5;
 $tab[9]=10;
 
-$temp;
+/*$temp;
 for ($j=0; $j<10-2; $j++)
 {
 for ($i=0; $i<10-2; $i++)
@@ -42,14 +42,14 @@ tab[$i] = temp;
 }
 }
 echo "Tablica po sortowaniu bąbelkowym";
-foreach ($position in tab)
+foreach ($position in $tab)
 echo($position + " ");
 
 echo "<table style<tr>";
 for ($i=0; $i<10; $i++) {
 echo "<td>$tab[$i]</td>";
 }
-echo "</table></tr>";
+echo "</table></tr>";*/
 
 ?>
 
