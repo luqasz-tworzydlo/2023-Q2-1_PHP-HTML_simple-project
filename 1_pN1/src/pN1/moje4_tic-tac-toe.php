@@ -17,7 +17,7 @@ border: 1px solid black;
 width: 50px;
 height: 50px;
 text-align: center; }
-    </style>
+</style>
 
 
 <body>
@@ -44,7 +44,7 @@ podswietlenie miejsca podpowiedzi*/
 
 session_start();
         //session_abort();
-       
+
         $plansza = isset($_SESSION['plansza']) ? $_SESSION['plansza'] :
                                                     array(
                                                         '---', '---', '---',
@@ -52,7 +52,7 @@ session_start();
                                                         '---', '---', '---');
 
         $gracz = isset($_SESSION['gracz']) ? $_SESSION['gracz'] : 'X';
-       
+
         function printplansza($plansza)
         {
             echo "<table>\n";
@@ -66,7 +66,7 @@ session_start();
             }
             echo "</table>\n";
         }
-       
+
         function wykonaj_ruch($plansza, $gracz, $ruch)
         {
             if ($plansza[$ruch] == '---')
@@ -75,7 +75,7 @@ session_start();
             }
             return $plansza;
         }
-       
+
         function sprawdz_wygrana($plansza, $gracz)
         {
             for ($i = 0; $i < 9; $i += 3)
@@ -85,7 +85,7 @@ session_start();
                     return true;
                 }
             }
-           
+
             for ($i = 0; $i < 3; $i++)
             {
                 if ($plansza[$i] == $gracz && $plansza[$i+3] == $gracz && $plansza[$i+6] == $gracz)
@@ -93,7 +93,7 @@ session_start();
                     return true;
                 }
             }
-           
+
             if ($plansza[0] == $gracz && $plansza[4] == $gracz && $plansza[8] == $gracz)
             {
                 return true;
@@ -103,10 +103,10 @@ session_start();
             {
                 return true;
             }
-           
+
             return false;
         }
-       
+
         if (isset($_GET['ruch']))
         {
             $ruch = intval($_GET['ruch']);
@@ -132,7 +132,7 @@ session_start();
 
             $_SESSION['gracz'] = $gracz;
         }
-       
+
         printplansza($plansza);
         if (in_array('---', $plansza) === false)
         {
