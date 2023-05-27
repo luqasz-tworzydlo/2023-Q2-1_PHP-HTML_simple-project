@@ -20,36 +20,49 @@ echo "<p>Hello from <b>HTML from PHP from HTML :></b><p/>";
 echo '<img src="wsb.png" alt ="cos tam"/><br/>';
 
 // sortowanie bąbelkowe
-$tab[0]=8;
-$tab[1]=9;
-$tab[2]=7;
-$tab[3]=2;
-$tab[4]=3;
-$tab[5]=1;
-$tab[6]=4;
-$tab[7]=6;
-$tab[8]=5;
-$tab[9]=10;
+$tab = array(8, 9, 7, 2, 3, 1, 4, 6, 5, 10);
 
-/*$temp;
-for ($j=0; $j<10-2; $j++)
-{
-for ($i=0; $i<10-2; $i++)
-{
-if(tab[$i] = tab[$i+1]);
-tab[$i+1] = tab[$i];
-tab[$i] = temp;
-}
-}
-echo "Tablica po sortowaniu bąbelkowym";
-foreach ($position in $tab)
-echo($position + " ");
+// tablica przed sortowaniem bąbelkowym
 
-echo "<table style<tr>";
-for ($i=0; $i<10; $i++) {
-echo "<td>$tab[$i]</td>";
+echo "<br> Tablica przed sortowaniem bąbelkowym<br/>";
+foreach ($tab as $position)
+{
+    echo($position . " ");
 }
-echo "</table></tr>";*/
+
+echo "<table><tr>";
+for ($i=0; $i<count($tab); $i++) {
+    echo "<td>{$tab[$i]}</td>";
+}
+echo "</tr></table>";
+
+// algorytm sortowania bąbelkowego
+
+for ($j=0; $j<count($tab)-1; $j++)
+{
+    for ($i=0; $i<count($tab)-1-$j; $i++)
+    {
+        if($tab[$i] > $tab[$i+1]){
+            $temp = $tab[$i+1];
+            $tab[$i+1] = $tab[$i];
+            $tab[$i] = $temp;
+        }
+    }
+}
+
+// tablica po sortowaniu bąbelkowym
+
+echo "<br> Tablica po sortowaniu bąbelkowym<br/>";
+foreach ($tab as $position)
+{
+    echo($position . " ");
+}
+
+echo "<table><tr>";
+for ($i=0; $i<count($tab); $i++) {
+    echo "<td>{$tab[$i]}</td>";
+}
+echo "</tr></table>";
 
 ?>
 
